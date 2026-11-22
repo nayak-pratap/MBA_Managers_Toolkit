@@ -1,0 +1,33 @@
+/* Calculator harness — layers on top of ../style.css */
+.tk-form{background:var(--paper-card);border:1px solid var(--line-strong);padding:20px 22px;margin:18px 0}
+.tk-form h2{font-size:18px;margin:0 0 4px}
+.tk-formnote{font-size:13px;color:var(--ink-mute);margin:0 0 16px}
+.tk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px 18px}
+.tk-f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.tk-f.wide{grid-column:1/-1}
+.tk-f label{font-size:13px;color:var(--ink);font-weight:500;line-height:1.35}
+.tk-f .u{font-family:var(--font-mono);font-size:11px;color:var(--blue)}
+.tk-f input,.tk-f select,.tk-f textarea{font-family:var(--font-body);font-size:15px;color:var(--ink);
+  background:var(--paper);border:1px solid var(--line-strong);padding:8px 10px;width:100%;border-radius:0}
+.tk-f input:focus,.tk-f select:focus,.tk-f textarea:focus{outline:2px solid var(--copper);outline-offset:1px;background:#fff}
+.tk-f input[type=number]{font-family:var(--font-mono);font-size:14.5px}
+.tk-f textarea{resize:vertical;min-height:62px;line-height:1.5}
+.tk-f .hint{font-size:12px;color:var(--ink-mute);line-height:1.4}
+.tk-f.bad input{border-color:var(--bad,#b3342a)}
+.tk-gh{grid-column:1/-1;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--copper);border-bottom:1px solid var(--line);padding-bottom:4px;margin:6px 0 0}
+.tk-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+.tk-btn{font-family:var(--font-display);font-weight:600;font-size:14px;background:var(--paper);color:var(--blue);
+  border:1px solid var(--blue);padding:8px 14px;cursor:pointer}
+.tk-btn:hover{background:var(--blue-wash)}
+.tk-btn.primary{background:var(--blue);color:#fff}
+.tk-btn.primary:hover{background:#163c6b}
+.tk-live{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-mute);margin-left:auto}
+.tk-err{background:var(--badw,#f9e1de);border-left:4px solid var(--bad,#b3342a);padding:9px 13px;font-size:14.5px;margin:0 0 10px}
+.tk-out-h{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin:22px 0 6px}
+.tk-ref{background:var(--paper-card);border:1px solid var(--line-strong);padding:22px;margin:18px 0}
+.tk-ref .mini-h:first-child{margin-top:0!important}
+.tk-crumb{font-family:var(--font-mono);font-size:12px;color:var(--ink-mute);margin:0 0 14px}
+.tk-crumb a{text-decoration:none}
+.tk-copied{color:var(--good,#1b7f46)}
+@media print{.tk-bar,header.top{display:none}.tk-form,.tk-ref{break-inside:avoid}}

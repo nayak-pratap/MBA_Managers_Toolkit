@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Templates and calculators — The Manager's Toolkit — Pratap Nayak</title>
+<meta name="description" content="Say what you are trying to do and get the frameworks that fit, with templates and small calculators.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top"><div class="in"><a class="back" href="index.html">← The Manager's Toolkit</a><span class="brand">Tools · The Manager's Toolkit</span></div></header>
+<div class="wrap">
+<p class="session-label">Leadership tool · Part 3</p>
+<h1 class="sub-title">Templates &amp; Calculators</h1>
+<p class="fw-meta" style="font-size:1.05rem">Templates and small working calculators for everyday decisions</p>
+<nav class="tabs" aria-label="Toolkit sections">
+  <a href="index.html">Overview</a>
+  <a href="core-frameworks.html">Core frameworks</a>
+  <a href="transformation-frameworks.html">Transformation frameworks</a>
+  <a href="templates-calculators.html" aria-current="page">Templates &amp; calculators</a>
+  <a href="machining-tools.html">Machining</a>
+  <a href="engineering-tools.html">Engineering</a>
+  <a href="operations-tools.html">Operations</a>
+  <a href="leadership-tools.html">Leadership</a>
+  <a href="communication-tools.html">Communication</a>
+</nav>
+<div class="panel on" id="p-tools">
+<p class="fw-meta" style="font-size:1.05rem;margin:0 0 4px">Say what you are trying to do and get the frameworks that fit, with templates and small calculators.</p>
+<section class="sheet" aria-labelledby="pick">
+    <h2 id="pick">1 · What are you trying to do?</h2>
+    <p class="sub">Pick one. The guide below changes to match.</p>
+    <div class="intents" id="intents" role="group" aria-label="Intent"></div>
+  </section>
+
+  <section class="sheet" aria-live="polite" aria-labelledby="fwh">
+    <h2 id="fwh">2 · Frameworks that fit</h2>
+    <div id="frameworks"></div>
+  </section>
+
+  <section class="sheet" aria-labelledby="th">
+    <h2 id="th">3 · Small working tools</h2>
+    <p class="sub">Everything runs in your browser. Nothing is stored or sent anywhere.</p>
+    <div class="tools">
+
+      <div class="tool" id="t-matrix">
+        <h3>Weighted decision matrix</h3>
+        <p class="hint">Weights 1–5 (importance). Scores 1–5 (how well each option meets the criterion).</p>
+        <table>
+          <thead><tr><th>Criterion</th><th>Wt</th><th>Opt A</th><th>Opt B</th><th>Opt C</th></tr></thead>
+          <tbody id="m-body"></tbody>
+        </table>
+        <div class="out" id="m-out">Fill in scores to see the ranking.</div>
+      </div>
+
+      <div class="tool" id="t-rice">
+        <h3>RICE priority score</h3>
+        <p class="hint">Score = Reach × Impact × Confidence ÷ Effort. Higher is first.</p>
+        <table>
+          <thead><tr><th>Item</th><th>Reach</th><th>Impact</th><th>Conf %</th><th>Effort</th><th>Score</th></tr></thead>
+          <tbody id="r-body"></tbody>
+        </table>
+        <div class="out" id="r-out">Enter at least one item.</div>
+      </div>
+
+      <div class="tool" id="t-pay">
+        <h3>Payback and NPV</h3>
+        <p class="hint">Quick business case for a tool, system or process change.</p>
+        <div class="row2">
+          <div><label for="p-inv">Upfront investment</label><input id="p-inv" type="number" value="500000" min="0"></div>
+          <div><label for="p-sav">Net benefit per year</label><input id="p-sav" type="number" value="200000"></div>
+          <div><label for="p-yrs">Years considered</label><input id="p-yrs" type="number" value="5" min="1" max="20"></div>
+          <div><label for="p-rate">Discount rate %</label><input id="p-rate" type="number" value="10" min="0" step="0.5"></div>
+        </div>
+        <div class="out" id="p-out"></div>
+      </div>
+
+      <div class="tool" id="t-cpk">
+        <h3>Process capability (Cp / Cpk)</h3>
+        <p class="hint">Is the process good enough for the tolerance? Cpk of 1.33+ is a common minimum.</p>
+        <div class="row2">
+          <div><label for="c-lsl">Lower spec limit</label><input id="c-lsl" type="number" value="9.95" step="any"></div>
+          <div><label for="c-usl">Upper spec limit</label><input id="c-usl" type="number" value="10.05" step="any"></div>
+          <div><label for="c-mean">Process mean</label><input id="c-mean" type="number" value="10.01" step="any"></div>
+          <div><label for="c-sd">Std deviation (within)</label><input id="c-sd" type="number" value="0.015" step="any" min="0"></div>
+        </div>
+        <div class="out" id="c-out"></div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+</div>
+<footer>Pratap Nayak · Frameworks drawn from my coursework at IIM Sirmaur (Executive MBA with AI) and my engineering career. <a href="index.html">Toolkit overview</a> · <a href="https://github.com/nayak-pratap">GitHub profile</a></footer>
+<script>
+(function(){
+  var INTENTS = [
+    {id:'prioritise', t:'Decide what to do first', d:'Too many requests, limited people'},
+    {id:'decide', t:'Choose between options', d:'Tool, supplier, design, hire'},
+    {id:'solve', t:'Solve a recurring problem', d:'Find the root cause, not the symptom'},
+    {id:'case', t:'Make a business case', d:'Get funding or approval'},
+    {id:'change', t:'Lead a change', d:'New system, process or way of working'},
+    {id:'team', t:'Lead and develop my team', d:'Delegate, coach, set expectations'},
+    {id:'improve', t:'Improve a process', d:'Cut waste, lead time or variation'}
+  ];
+
+  var FW = {
+    prioritise:[
+      {n:'RICE scoring', tag:'Rank', when:'A long list of requests competing for the same engineers.',
+       steps:['List every candidate item.','Estimate Reach, Impact (0.25–3), Confidence % and Effort (person-weeks).','Compute Reach × Impact × Confidence ÷ Effort.','Sort, then sanity-check the top five with the people who will do the work.'],
+       shop:'Ranking customer application requests by number of machines affected, not by who shouted loudest.',
+       tpl:'Item | Reach | Impact | Confidence | Effort | Score\n---- | ----- | ------ | ---------- | ------ | -----\n', tool:'t-rice'},
+      {n:'Eisenhower matrix', tag:'Triage', when:'Your own week is full and you need to protect time for important work.',
+       steps:['Sort tasks into urgent/important quadrants.','Do urgent+important now.','Schedule important, not urgent, with a calendar block.','Delegate or drop the rest.'],
+       shop:'Protect time for building knowledge assets (important, never urgent) against daily firefighting.',
+       tpl:'DO NOW (urgent, important):\nSCHEDULE (important, not urgent):\nDELEGATE (urgent, not important):\nDROP (neither):\n'}
+    ],
+    decide:[
+      {n:'Weighted decision matrix', tag:'Compare', when:'Several options, several criteria, and a need to show your reasoning.',
+       steps:['Agree the criteria before looking at the options.','Weight the criteria 1–5.','Score each option 1–5 per criterion.','Multiply, sum, and challenge any result that feels wrong, because it usually reveals a missing criterion.'],
+       shop:'Choosing between two insert grades on tool life, cost per part, availability and supplier support.',
+       tpl:'Decision:\nCriteria and weights:\nOption A / B / C scores:\nTotals:\nWhat the matrix does not capture:\nRecommendation:\n', tool:'t-matrix'},
+      {n:'Total cost of ownership', tag:'Cost', when:'The cheapest price is not obviously the cheapest choice.',
+       steps:['List acquisition, operating, maintenance, downtime and disposal costs.','Estimate each over the same period.','Compare totals and the biggest driver.','Test the assumption that moves the answer most.'],
+       shop:'A costlier tool that runs faster and lasts longer often wins on cost per component, not cost per tool.',
+       tpl:'Option:\nPeriod:\nAcquisition:\nOperating:\nMaintenance:\nDowntime:\nTotal:\nBiggest driver:\n', tool:'t-pay'}
+    ],
+    solve:[
+      {n:'5 Whys with evidence', tag:'Root cause', when:'A problem keeps coming back after being "fixed".',
+       steps:['State the problem with data: what, where, how often.','Ask why; answer only with something you can verify.','Repeat until you reach a cause you can control.','Confirm the cause by turning it off and on, then fix and monitor.'],
+       shop:'Chatter on a part: not "operator error" but unsupported overhang, then why the fixture allowed it.',
+       tpl:'Problem (with data):\nWhy 1:\nWhy 2:\nWhy 3:\nWhy 4:\nWhy 5 / root cause:\nVerification:\nPermanent fix:\nHow we will know it held:\n'},
+      {n:'Is it variation or a change? (control chart thinking)', tag:'Statistics', when:'Someone wants to react to one bad number.',
+       steps:['Plot the measure over time.','Compute limits from the process itself.','Treat points inside limits as normal variation; do not chase them.','Investigate points outside limits or clear runs.'],
+       shop:'One out-of-tolerance part is not a trend. React to signals, not noise.',
+       tpl:'Measure:\nPeriod:\nMean / limits:\nSignals found:\nAction:\n', tool:'t-cpk'}
+    ],
+    case:[
+      {n:'One-page business case', tag:'Fund', when:'You need approval for money, people or time.',
+       steps:['Problem and cost of doing nothing.','Proposed solution and alternatives considered.','Costs, benefits, payback.','Risks and what would change your mind.','The decision you want, by when.'],
+       shop:'Frame engineering time saved as lead time and revenue protected, not as hours.',
+       tpl:'Problem and cost of inaction:\nProposal:\nAlternatives:\nInvestment:\nBenefit per year:\nPayback / NPV:\nRisks:\nDecision needed by:\n', tool:'t-pay'},
+      {n:'Cost of poor quality', tag:'Finance', when:'Quality work needs to be justified in money terms.',
+       steps:['Split cost into prevention, appraisal, internal failure, external failure.','Estimate each from scrap, rework, returns and delays.','Show where moving spend left reduces total cost.'],
+       shop:'Faster solution turnaround reduces failure and waiting cost downstream.',
+       tpl:'Prevention:\nAppraisal:\nInternal failure:\nExternal failure:\nTotal:\nProposed shift:\n'}
+    ],
+    change:[
+      {n:'Kotter 8 steps (condensed)', tag:'Change', when:'A new system or process that people must actually adopt.',
+       steps:['Create a reason people feel, with data.','Form a small coalition including a sceptic.','Show a vision in one sentence.','Win something small and visible early.','Embed it in routines and reviews.'],
+       shop:'A knowledge platform only works if engineers find it faster than asking a colleague, so make that the first win.',
+       tpl:'Why now:\nCoalition:\nOne-sentence vision:\nFirst visible win (30 days):\nHow it becomes routine:\nAdoption measure:\n'},
+      {n:'Stakeholder map (power / interest)', tag:'Align', when:'Several groups must agree and some will resist.',
+       steps:['List everyone affected.','Place each on power and interest.','Decide an approach for each: manage closely, keep satisfied, keep informed, monitor.','Assign an owner for each relationship.'],
+       shop:'Plant, sales and quality leaders often need different reasons to support the same change.',
+       tpl:'Stakeholder | Power | Interest | What they care about | Approach | Owner\n'}
+    ],
+    team:[
+      {n:'Delegation levels', tag:'Delegate', when:'You are doing work that someone else could grow into.',
+       steps:['Pick the task and the person.','Agree a level: do as told, recommend, decide and tell, decide fully.','Set outcome, deadline and check-in points.','Raise the level as trust grows.'],
+       shop:'Let a strong engineer own a customer account fully while you stay a sounding board.',
+       tpl:'Task:\nOwner:\nLevel (1–4):\nOutcome and deadline:\nCheck-ins:\nWhen to raise the level:\n'},
+      {n:'Skill / will grid', tag:'Coach', when:'Deciding how to manage each person differently.',
+       steps:['Rate skill and will, low or high.','High skill, high will: delegate. Low skill, high will: teach.','High skill, low will: find the cause. Low, low: set clear expectations.','Revisit every quarter.'],
+       shop:'Same engineer, different tasks: expert on turning, new to digital tools.',
+       tpl:'Person:\nSkill (L/H):\nWill (L/H):\nApproach:\nNext conversation:\n'}
+    ],
+    improve:[
+      {n:'DMAIC', tag:'Process', when:'A measurable process problem with a clear owner.',
+       steps:['Define: customer, problem, target.','Measure: baseline with real data.','Analyse: find the few causes that matter.','Improve: test fixes on a small scale.','Control: standardise, monitor, hand over.'],
+       shop:'Cutting solution lead time: map the steps, time each, remove waiting before speeding up work.',
+       tpl:'Define:\nMeasure (baseline):\nAnalyse (top causes):\nImprove (pilot):\nControl (owner, check, trigger):\n', tool:'t-cpk'},
+      {n:'Value-stream map', tag:'Flow', when:'Work takes long but each step looks fast.',
+       steps:['Draw the steps from request to delivery.','Mark touch time and waiting time for each.','Compute flow efficiency (touch ÷ total).','Attack the largest wait first.'],
+       shop:'A 5-day request is often 4 hours of work and 4.5 days of waiting for inputs and approvals.',
+       tpl:'Step | Touch time | Wait before | Owner\nTotals:\nFlow efficiency:\nBiggest wait:\nExperiment:\n'}
+    ]
+  };
+
+  var $ = function(id){return document.getElementById(id)};
+  var esc = function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+
+  function renderIntents(sel){
+    var el = $('intents'); el.innerHTML='';
+    INTENTS.forEach(function(i){
+      var b = document.createElement('button');
+      b.className='intent'; b.type='button'; b.setAttribute('aria-pressed', i.id===sel);
+      b.innerHTML='<b>'+esc(i.t)+'</b><span>'+esc(i.d)+'</span>';
+      b.onclick=function(){ select(i.id);  };
+      el.appendChild(b);
+    });
+  }
+  function select(id){
+    renderIntents(id);
+    var list = FW[id]||[]; var h='';
+    list.forEach(function(f,idx){
+      h+='<article class="fw"><h3><span class="tag">'+esc(f.tag)+'</span>'+esc(f.n)+'</h3>'+
+        '<p class="when"><b>Use when:</b> '+esc(f.when)+'</p><ol>'+f.steps.map(function(s){return '<li>'+esc(s)+'</li>'}).join('')+'</ol>'+
+        '<p class="shopfloor"><b>Shop-floor read:</b> '+esc(f.shop)+'</p>'+
+        (f.tool?'<p><a class="btn ghost" style="display:inline-block;padding:7px 12px;text-decoration:none;font-size:14px" href="#'+f.tool+'">Open calculator ↓</a></p>':'')+
+        '<details><summary>Template</summary><pre class="tpl" id="tpl-'+idx+'">'+esc(f.tpl)+'</pre>'+
+        '<button class="btn" type="button" data-copy="'+idx+'">Copy template</button>'+
+        '</details></article>';
+    });
+    $('frameworks').innerHTML=h;
+    $('frameworks').querySelectorAll('[data-copy]').forEach(function(b){
+      b.onclick=function(){
+        var txt=list[+b.dataset.copy].tpl, done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy template'},1500)};
+        if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,function(){fallback(txt);done()})}else{fallback(txt);done()}
+      };
+    });
+  }
+  function fallback(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}document.body.removeChild(a)}
+
+  // Decision matrix
+  var crit=['Performance','Cost','Availability','Risk'];
+  var mb=$('m-body');
+  crit.forEach(function(c,i){
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td><input aria-label="Criterion '+(i+1)+'" value="'+c+'"></td><td><input type="number" min="1" max="5" value="3" aria-label="Weight"></td>'+
+      [0,1,2].map(function(k){return '<td><input type="number" min="1" max="5" aria-label="Option '+'ABC'[k]+' score"></td>'}).join('');
+    mb.appendChild(tr);
+  });
+  function calcM(){
+    var tot=[0,0,0],any=false;
+    mb.querySelectorAll('tr').forEach(function(tr){
+      var ins=tr.querySelectorAll('input'), w=+ins[1].value||0;
+      for(var k=0;k<3;k++){var v=ins[2+k].value; if(v!==''){any=true;tot[k]+=w*(+v)}}
+    });
+    if(!any){$('m-out').textContent='Fill in scores to see the ranking.';return}
+    var best=tot.indexOf(Math.max.apply(null,tot));
+    $('m-out').innerHTML='Totals: A <b>'+tot[0]+'</b> · B <b>'+tot[1]+'</b> · C <b>'+tot[2]+'</b><br>Leading: <b>Option '+'ABC'[best]+'</b>. Check that the result matches your gut; if not, a criterion is missing.';
+  }
+  mb.addEventListener('input',calcM);
+
+  // RICE
+  var rb=$('r-body');
+  for(var i=0;i<4;i++){
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td><input aria-label="Item name" placeholder="Item '+(i+1)+'"></td><td><input type="number" min="0" aria-label="Reach"></td><td><input type="number" min="0" max="3" step="0.25" aria-label="Impact"></td><td><input type="number" min="0" max="100" aria-label="Confidence percent"></td><td><input type="number" min="0.1" step="0.1" aria-label="Effort"></td><td class="sc mono">–</td>';
+    rb.appendChild(tr);
+  }
+  rb.addEventListener('input',function(){
+    var rows=[];
+    rb.querySelectorAll('tr').forEach(function(tr){
+      var ins=tr.querySelectorAll('input'), r=+ins[1].value, im=+ins[2].value, c=+ins[3].value/100, e=+ins[4].value;
+      var cell=tr.querySelector('.sc');
+      if(r>0&&im>0&&c>0&&e>0){var s=r*im*c/e;cell.textContent=s.toFixed(1);rows.push({n:ins[0].value||'Unnamed',s:s})}else cell.textContent='–';
+    });
+    rows.sort(function(a,b){return b.s-a.s});
+    $('r-out').innerHTML=rows.length?'Order: '+rows.map(function(r,i){return (i+1)+'. <b>'+esc(r.n)+'</b>'}).join(' · '):'Enter at least one item.';
+  });
+
+  // Payback / NPV
+  function calcP(){
+    var inv=+$('p-inv').value,s=+$('p-sav').value,n=Math.max(1,Math.min(20,Math.round(+$('p-yrs').value||1))),r=(+$('p-rate').value||0)/100;
+    var npv=-inv; for(var t=1;t<=n;t++)npv+=s/Math.pow(1+r,t);
+    var pb=s>0?inv/s:Infinity;
+    $('p-out').innerHTML='Simple payback: <b>'+(isFinite(pb)?pb.toFixed(1)+' years':'never')+'</b><br>NPV over '+n+' years at '+(r*100).toFixed(1)+'%: <b>'+Math.round(npv).toLocaleString()+'</b><br>'+(npv>0?'Creates value at this discount rate.':'Does not recover the investment at this rate. Test the benefit assumption.');
+  }
+  ['p-inv','p-sav','p-yrs','p-rate'].forEach(function(id){$(id).addEventListener('input',calcP)});calcP();
+
+  // Cp/Cpk
+  function calcC(){
+    var l=+$('c-lsl').value,u=+$('c-usl').value,m=+$('c-mean').value,sd=+$('c-sd').value;
+    if(!(sd>0)||u<=l){$('c-out').textContent='Enter valid limits and a positive standard deviation.';return}
+    var cp=(u-l)/(6*sd),cpk=Math.min((u-m)/(3*sd),(m-l)/(3*sd));
+    var v=cpk>=1.67?'Strong capability.':cpk>=1.33?'Capable.':cpk>=1?'Marginal; expect some out-of-spec parts.':'Not capable; fix centring or variation.';
+    var note=cp-cpk>0.2?' The gap between Cp and Cpk says the process is off-centre.':'';
+    $('c-out').innerHTML='Cp <b>'+cp.toFixed(2)+'</b> · Cpk <b>'+cpk.toFixed(2)+'</b><br>'+v+note;
+  }
+  ['c-lsl','c-usl','c-mean','c-sd'].forEach(function(id){$(id).addEventListener('input',calcC)});calcC();
+
+  var start='prioritise';
+  select(start);
+})();
+</script>
+</body></html>

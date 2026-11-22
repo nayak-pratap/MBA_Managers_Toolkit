@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Core frameworks — The Manager's Toolkit — Pratap Nayak</title>
+<meta name="description" content="Six Sigma DMAIC, Kotter's 8 Steps, Situational Leadership and the Balanced Scorecard, with worked examples.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top"><div class="in"><a class="back" href="index.html">← The Manager's Toolkit</a><span class="brand">Tools · The Manager's Toolkit</span></div></header>
+<div class="wrap">
+<p class="session-label">Leadership tool · Part 1</p>
+<h1 class="sub-title">Core Frameworks</h1>
+<p class="fw-meta" style="font-size:1.05rem">Four frameworks for leading technical teams through change, with a worked example for each</p>
+<nav class="tabs" aria-label="Toolkit sections">
+  <a href="index.html">Overview</a>
+  <a href="core-frameworks.html" aria-current="page">Core frameworks</a>
+  <a href="transformation-frameworks.html">Transformation frameworks</a>
+  <a href="templates-calculators.html">Templates &amp; calculators</a>
+  <a href="machining-tools.html">Machining</a>
+  <a href="engineering-tools.html">Engineering</a>
+  <a href="operations-tools.html">Operations</a>
+  <a href="leadership-tools.html">Leadership</a>
+  <a href="communication-tools.html">Communication</a>
+</nav>
+<div class="panel on" id="p-core">
+<nav class="chips" aria-label="On this page">
+    <a href="#overview">Overview</a>
+    <a href="#fw1">Six Sigma DMAIC</a>
+    <a href="#fw2">Kotter's 8 Steps</a>
+    <a href="#fw3">Situational Leadership</a>
+    <a href="#fw4">Balanced Scorecard</a>
+    <a href="#connect">How the four connect</a>
+    <a href="#quickref">Quick reference</a>
+    <a href="#refs">References &amp; AI use</a>
+  </nav>
+
+
+
+  <section id="overview" class="unnumbered">
+    <div class="section-head-plain"><h2>Overview and Selection Rationale</h2></div>
+    <div class="body-inset">
+      <p><strong>Area:</strong> leading technical teams through process improvement and transformation. The four frameworks come from operations, organisational behaviour and strategy, because that is how the work arrives on a manager's desk: a process problem, a change that has to be adopted, a team that has to be developed, and a result that has to be explained to the business.</p>
+      <p>I have spent years in cutting-tool engineering, moving from CNC shop floor to design, to leading an engineering team, to building a knowledge-management system and an AI agent. The next step is business transformation leadership. I chose the four frameworks I would genuinely open when a decision lands on my desk, across that whole arc: past roles, my current role and the role I am preparing for.</p>
+
+      <div class="kt-table-wrap">
+      <table class="kt-table">
+        <thead><tr><th>Framework</th><th>Where it comes from in my career</th><th>Where it takes me next</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Six Sigma DMAIC</strong><br><span class="kt-sub">Operations</span></td><td>CNC defect and lead-time work, then process optimisation as a manager</td><td>Running improvement portfolios across functions</td></tr>
+          <tr><td><strong>Kotter's 8 Steps</strong><br><span class="kt-sub">Change leadership</span></td><td>Rolling out a knowledge system and Copilot agent across functions</td><td>Leading AI and business transformation</td></tr>
+          <tr><td><strong>Situational Leadership</strong><br><span class="kt-sub">People and teams</span></td><td>Building a team from the ground up; skill matrix; growing engineers into managers</td><td>Leading larger, more varied teams</td></tr>
+          <tr><td><strong>Balanced Scorecard</strong><br><span class="kt-sub">Strategy and measurement</span></td><td>Dashboards and delivery KPIs for a global engineering centre</td><td>Connecting technical results to market-centric strategy</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p class="mini-h">Considered but not chosen</p>
+      <p>Theory of Constraints is excellent for bottlenecks, but DMAIC covers most of what I need from it. McKinsey 7S is useful for organisational diagnosis, yet Kotter and the Scorecard cover the change and strategy sides more directly. Value Chain and Stakeholder Mapping are strong analytical tools, but I wanted frameworks that guide action, not only analysis.</p>
+    </div>
+  </section>
+
+  <!-- ============ FRAMEWORK 1 ============ -->
+  <section id="fw1" class="unnumbered">
+    <div class="section-head-plain"><h2>1 · Six Sigma DMAIC</h2></div>
+    <div class="body-inset">
+      <p class="mini-h">A. Explanation of the framework</p>
+      <p><strong>Origin.</strong> Six Sigma began at Motorola in the mid-1980s, associated with engineer Bill Smith and later developed by Mikel Harry. General Electric's adoption in the mid-1990s made it a mainstream management method (Harry &amp; Schroeder, 2000). DMAIC is its improvement method for existing processes.</p>
+      <p><strong>Core idea.</strong> Every process produces variation, and variation produces defects, delay and cost. Six Sigma asks a manager to stop arguing from opinion and instead measure the process, find the few causes that drive most of the problem, fix those, and lock the gain in. The famous target of 3.4 defects per million opportunities is a statement of how little variation a process should show relative to what the customer will accept.</p>
+      <ol class="num-list">
+        <li><span class="num-circle">1</span><span><strong>Define</strong> — state the problem, the customer requirement, the scope and the goal in a short project charter</span></li>
+        <li><span class="num-circle">2</span><span><strong>Measure</strong> — decide what to measure, check the measurement can be trusted, and record the baseline</span></li>
+        <li><span class="num-circle">3</span><span><strong>Analyze</strong> — use Pareto charts, cause-and-effect diagrams and the 5 Whys to find the root causes the data supports, not the ones people assume</span></li>
+        <li><span class="num-circle">4</span><span><strong>Improve</strong> — generate solutions for those root causes, pilot them, and confirm the metric actually moves</span></li>
+        <li><span class="num-circle">5</span><span><strong>Control</strong> — make the gain permanent with standard work, control charts, clear ownership and a response plan if the process drifts</span></li>
+      </ol>
+      <figure class="fw-fig">
+        <svg viewBox="0 0 680 170" role="img" aria-label="DMAIC cycle: Define, Measure, Analyze, Improve, Control, with a loop back to Define">
+          <defs><marker id="ar1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="sv-arrow"/></marker></defs>
+          <g>
+            <rect class="sv-box" x="0" y="10" width="112" height="76" rx="6"/><text class="sv-t" x="56" y="42" text-anchor="middle">Define</text><text class="sv-s" x="56" y="62" text-anchor="middle">Frame the problem</text>
+            <rect class="sv-box" x="136" y="10" width="112" height="76" rx="6"/><text class="sv-t" x="192" y="42" text-anchor="middle">Measure</text><text class="sv-s" x="192" y="62" text-anchor="middle">Set the baseline</text>
+            <rect class="sv-box" x="272" y="10" width="112" height="76" rx="6"/><text class="sv-t" x="328" y="42" text-anchor="middle">Analyze</text><text class="sv-s" x="328" y="62" text-anchor="middle">Find root causes</text>
+            <rect class="sv-box" x="408" y="10" width="112" height="76" rx="6"/><text class="sv-t" x="464" y="42" text-anchor="middle">Improve</text><text class="sv-s" x="464" y="62" text-anchor="middle">Pilot the fix</text>
+            <rect class="sv-box sv-accent" x="544" y="10" width="112" height="76" rx="6"/><text class="sv-t" x="600" y="42" text-anchor="middle">Control</text><text class="sv-s" x="600" y="62" text-anchor="middle">Hold the gain</text>
+          </g>
+          <g class="sv-line" marker-end="url(#ar1)">
+            <line x1="112" y1="48" x2="134" y2="48" marker-end="url(#ar1)"/>
+            <line x1="248" y1="48" x2="270" y2="48" marker-end="url(#ar1)"/>
+            <line x1="384" y1="48" x2="406" y2="48" marker-end="url(#ar1)"/>
+            <line x1="520" y1="48" x2="542" y2="48" marker-end="url(#ar1)"/>
+            <path d="M600,86 L600,128 L56,128 L56,88" fill="none" marker-end="url(#ar1)"/>
+          </g>
+          <text class="sv-s" x="328" y="150" text-anchor="middle">Next cycle: re-define the problem as the process improves</text>
+        </svg>
+        <figcaption>Figure 1. The DMAIC improvement cycle (drawn for this assignment).</figcaption>
+      </figure>
+
+      <p class="mini-h">B. Why it is one of the most important frameworks for a manager</p>
+      <p><strong>Problems it solves.</strong> Rework, long and unpredictable lead times, inconsistent quality, and problems that are "fixed" again and again. At the frontline it gives teams a method for cutting defects. Middle managers use it to sponsor projects and hold people to evidence. Senior leaders use it to decide which processes deserve attention.</p>
+      <p><strong>What a manager misses without it.</strong> Improvement tends to start at the solution: a new tool, system or extra headcount bought before anyone knows the baseline or the root cause. Gains are then hard to prove, and they decay because nobody owns the Control phase.</p>
+      <p><strong>Limitations.</strong> DMAIC works best on repeatable processes with measurable output and enough data. It is heavy for small, obvious fixes, and a poor fit for one-off or creative decisions such as entering a new market, where there is no process to measure. Applied rigidly it becomes tool-driven paperwork and discourages experimentation. Its rigour also depends on trustworthy data: a poor measurement system produces confident but wrong conclusions.</p>
+      <p><strong>Why it earns its place.</strong> For a manager moving from technical to business leadership, DMAIC is also a shared language. It lets you tell a finance leader or a customer exactly what changed, by how much, and how you know, which turns engineering instinct into evidence other functions accept.</p>
+
+      <p class="mini-h">C. Real-life managerial case</p>
+      <p class="case-by">Contributor: Pratap Nayak · Reducing engineering rework and lead time</p>
+      <ol class="num-list">
+        <li><span class="num-circle">1</span><span><strong>Context</strong> — a global cutting-tool manufacturer's captive engineering centre that prepares customer-specific tooling solutions. I was the manager of the engineering team.</span></li>
+        <li><span class="num-circle">2</span><span><strong>The challenge</strong> — engineering work was being revised repeatedly, consuming many hours, and solution delivery took about 8 days. The decision was how to cut revision effort and lead time without hurting quality, with customer responsiveness at stake.</span></li>
+        <li><span class="num-circle">3</span><span><strong>What happened</strong> — we ran process optimisation initiatives that combined automation with continuous-improvement practice. Revision hours fell by about 60%, worth roughly USD 150,000 a year, and lead time reached a record 4 days, down from 8.</span></li>
+        <li><span class="num-circle">4</span><span><strong>Applying the framework</strong> — read back through DMAIC. <em>Define:</em> the customer need is a faster, right-first-time solution, so lead time and revision hours become the measures. <em>Measure:</em> baseline both across projects, using the project data we already held. <em>Analyze:</em> rank the causes of revision with a Pareto chart, and ask the 5 Whys on the top few before automating anything. <em>Improve:</em> automate or standardise only the steps the analysis points to, and pilot first. <em>Control:</em> track the two measures on a dashboard with an owner and a trigger for action, such as a control chart that flags drift before customers feel it.</span></li>
+        <li><span class="num-circle">5</span><span><strong>What would change</strong> — a formal Define-and-Measure step would give a documented baseline, so the 60% and 8-to-4-day results are provable rather than remembered. A Pareto-first Analyze phase would also guard against automating a step that is visible but not the largest cause. A written control plan would make it clear who owns the numbers after the improvement effort moves on.</span></li>
+        <li><span class="num-circle">6</span><span><strong>Lesson</strong> — measure before you automate. A baseline turns an improvement story into evidence, and a control plan keeps it from fading. The same discipline is what I would bring to improvement work in functions beyond engineering.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FRAMEWORK 2 ============ -->
+  <section id="fw2" class="unnumbered">
+    <div class="section-head-plain"><h2>2 · Kotter's 8 Steps for Leading Change</h2></div>
+    <div class="body-inset">
+      <p class="mini-h">A. Explanation of the framework</p>
+      <p><strong>Origin.</strong> John P. Kotter of Harvard Business School published the model in his 1995 Harvard Business Review article "Leading Change: Why Transformation Efforts Fail", and expanded it in the 1996 book <em>Leading Change</em>. It grew out of his observation of more than a hundred companies trying to transform themselves (Kotter, 1995; 1996).</p>
+      <p><strong>Core idea.</strong> Most change efforts do not fail because the idea is wrong. They fail because leaders skip steps, or declare victory too early. Kotter's eight steps are a sequence for building the momentum and the conditions that make a change stick. The first four create the climate for change, the next two engage and enable people, and the last two implement and sustain.</p>
+      <ol class="num-list">
+        <li><span class="num-circle">1</span><span><strong>Establish a sense of urgency</strong> — make the case for why the status quo is costly</span></li>
+        <li><span class="num-circle">2</span><span><strong>Create a guiding coalition</strong> — assemble a group with enough credibility and power to lead</span></li>
+        <li><span class="num-circle">3</span><span><strong>Develop a vision and strategy</strong> — describe the future in a way people can picture</span></li>
+        <li><span class="num-circle">4</span><span><strong>Communicate the change vision</strong> — repeat it through every channel until it is understood</span></li>
+        <li><span class="num-circle">5</span><span><strong>Empower broad-based action</strong> — remove obstacles such as structures, skills and habits</span></li>
+        <li><span class="num-circle">6</span><span><strong>Generate short-term wins</strong> — plan visible early improvements and celebrate them</span></li>
+        <li><span class="num-circle">7</span><span><strong>Consolidate gains and produce more change</strong> — use early credibility to tackle the next layer</span></li>
+        <li><span class="num-circle">8</span><span><strong>Anchor new approaches in the culture</strong> — tie the change to how people are hired, rewarded and led</span></li>
+      </ol>
+      <figure class="fw-fig">
+        <svg viewBox="0 0 680 250" role="img" aria-label="Eight rising steps from urgency to anchoring the change in culture">
+          <g id="kotter-steps"></g>
+        </svg>
+        <figcaption>Figure 2. Kotter's eight steps as a rising staircase (drawn for this assignment).</figcaption>
+      </figure>
+
+      <p class="mini-h">B. Why it is one of the most important frameworks for a manager</p>
+      <p><strong>Problems it solves.</strong> New systems that nobody uses, resistance from people who were never brought along, and initiatives that start strongly and fade. Senior leaders use steps 1–4 to set urgency and direction. Middle managers carry the weight of steps 5–6, removing the obstacles that stop their teams acting. Frontline teams supply the short-term wins.</p>
+      <p><strong>What a manager misses without it.</strong> Technology or process change that is delivered but not adopted. The project is "complete", yet behaviour has not changed, because nobody built the urgency, the coalition or the habits that make the new way the normal way.</p>
+      <p><strong>Limitations.</strong> The steps are presented as a sequence, but real change is messier and steps often overlap or loop back. The model is top-down, suits large-scale change better than small tweaks, and has been criticised as prescriptive with a thin empirical evidence base. It should not be used for routine improvements, or in a crisis where decisions must be taken faster than a coalition can be built.</p>
+      <p><strong>Why it earns its place.</strong> Digital and AI programmes are now the most common reason a manager has to lead change. The technology is rarely the hard part. Kotter gives a checklist for the human side that is simple enough to use on a real programme plan.</p>
+
+      <p class="mini-h">C. Real-life managerial case</p>
+      <p class="case-by">Contributor: Pratap Nayak · Making a knowledge system and Copilot agent stick</p>
+      <ol class="num-list">
+        <li><span class="num-circle">1</span><span><strong>Context</strong> — the same global cutting-tool manufacturer's engineering centre. I was the manager and the designer of a knowledge-management system and a Copilot agent built on the Microsoft 365 platform.</span></li>
+        <li><span class="num-circle">2</span><span><strong>The challenge</strong> — expert knowledge sat with individuals and took long to find. The decision was how to capture it, and how to get it used first by the technology function and then by sales, design and application engineering globally. If it was not adopted, the investment would simply sit unused.</span></li>
+        <li><span class="num-circle">3</span><span><strong>What happened</strong> — the system captured more than 1,000 knowledge assets. Solution turnaround became about 60% faster and the time to find knowledge fell by about 90%. Because it worked for the technology function, it was redesigned to serve other functions, and it was recognised with a company strategic award.</span></li>
+        <li><span class="num-circle">4</span><span><strong>Applying the framework</strong> — mapped against Kotter's steps. Urgency was visible in slow knowledge discovery (step 1). The early speed and time-saving results were the short-term wins (step 6), and the extension to other functions was consolidating gains and producing more change (step 7). The steps in between, a named guiding coalition (step 2) and communication of a shared vision (steps 3–4), are where the framework asks a leader to be most deliberate before scaling.</span></li>
+        <li><span class="num-circle">5</span><span><strong>What would change</strong> — next time I would name a cross-functional guiding coalition before expanding beyond the first function, so that sales and design leaders co-own the vision rather than receive it. I would also anchor the change in onboarding and performance routines (step 8), so use does not depend on enthusiasm.</span></li>
+        <li><span class="num-circle">6</span><span><strong>Lesson</strong> — a tool is not a transformation. Plan for adoption as carefully as for capability, and turn early wins into the credibility for the next stage.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FRAMEWORK 3 ============ -->
+  <section id="fw3" class="unnumbered">
+    <div class="section-head-plain"><h2>3 · Situational Leadership</h2></div>
+    <div class="body-inset">
+      <p class="mini-h">A. Explanation of the framework</p>
+      <p><strong>Origin.</strong> Paul Hersey and Ken Blanchard introduced the model in 1969 as the life-cycle theory of leadership, published in <em>Management of Organizational Behavior</em> (Hersey &amp; Blanchard, 1969). Blanchard and colleagues later refined it as Situational Leadership II (Blanchard, Zigarmi &amp; Zigarmi, 1985).</p>
+      <p><strong>Core idea.</strong> There is no single best leadership style. An effective leader adjusts how much direction and how much support to give, according to the follower's competence and commitment on the specific task at hand. The same person can need different styles for different tasks, and the right style changes as they develop.</p>
+      <p>The model combines two behaviours, directive (telling what, how and when) and supportive (listening, encouraging, involving). They give four styles, each matched to a development level:</p>
+      <ol class="num-list">
+        <li><span class="num-circle">S1</span><span><strong>Directing</strong> (high directive, low support) — for the enthusiastic beginner who lacks skill but is keen</span></li>
+        <li><span class="num-circle">S2</span><span><strong>Coaching</strong> (high directive, high support) — for the disillusioned learner who has some skill but is losing confidence</span></li>
+        <li><span class="num-circle">S3</span><span><strong>Supporting</strong> (low directive, high support) — for the capable but cautious performer whose skill is high but confidence varies</span></li>
+        <li><span class="num-circle">S4</span><span><strong>Delegating</strong> (low directive, low support) — for the self-reliant achiever who is both skilled and committed</span></li>
+      </ol>
+      <p>Hersey and Blanchard's earlier labels were telling, selling, participating and delegating. The practical skill is diagnosis: judge the development level honestly, then flex the style.</p>
+      <figure class="fw-fig">
+        <svg viewBox="0 0 680 310" role="img" aria-label="Four leadership styles on a grid of directive and supportive behaviour">
+          <g class="sv-line"><line x1="100" y1="20" x2="100" y2="260"/><line x1="100" y1="260" x2="660" y2="260"/></g>
+          <rect class="sv-box" x="104" y="22" width="274" height="116" rx="6"/>
+          <rect class="sv-box sv-accent" x="382" y="22" width="274" height="116" rx="6"/>
+          <rect class="sv-box" x="104" y="142" width="274" height="116" rx="6"/>
+          <rect class="sv-box" x="382" y="142" width="274" height="116" rx="6"/>
+          <text class="sv-t" x="241" y="68" text-anchor="middle">S3 · Supporting</text><text class="sv-s" x="241" y="90" text-anchor="middle">Capable but cautious performer</text>
+          <text class="sv-t" x="519" y="68" text-anchor="middle">S2 · Coaching</text><text class="sv-s" x="519" y="90" text-anchor="middle">Disillusioned learner</text>
+          <text class="sv-t" x="241" y="188" text-anchor="middle">S4 · Delegating</text><text class="sv-s" x="241" y="210" text-anchor="middle">Self-reliant achiever</text>
+          <text class="sv-t" x="519" y="188" text-anchor="middle">S1 · Directing</text><text class="sv-s" x="519" y="210" text-anchor="middle">Enthusiastic beginner</text>
+          <text class="sv-s" x="380" y="284" text-anchor="middle">Directive behaviour: low → high</text>
+          <text class="sv-s" transform="translate(24,140) rotate(-90)" text-anchor="middle">Supportive behaviour: low → high</text>
+          <text class="sv-s" x="380" y="304" text-anchor="middle">As someone develops on a task, the style moves S1 → S2 → S3 → S4</text>
+        </svg>
+        <figcaption>Figure 3. Four styles matched to development level (drawn for this assignment).</figcaption>
+      </figure>
+
+      <p class="mini-h">B. Why it is one of the most important frameworks for a manager</p>
+      <p><strong>Problems it solves.</strong> Micromanaging experts, abandoning beginners, uneven onboarding, stalled delegation and weak succession planning. Frontline team leaders use it to get new people productive. Middle managers use it to build capability across a team. Senior leaders use it to develop their own successors and to avoid one leadership style for every situation.</p>
+      <p><strong>What a manager misses without it.</strong> A single default style. Over-directing skilled people drains their motivation and slows the team. Under-directing beginners produces errors, anxiety and quiet disengagement. Both look like "performance problems" when the cause is a mismatch of style.</p>
+      <p><strong>Limitations.</strong> It depends on the manager diagnosing development level accurately, which is easy to get wrong. Empirical support for the model is mixed. It focuses on the leader-follower pair and says little about team dynamics, culture or organisational context. In a genuine emergency, directing is needed whatever the person's skill level.</p>
+      <p><strong>Why it earns its place.</strong> Every manager is judged, in the end, by the people they develop. The model gives a simple, repeatable question to ask before each delegation or coaching conversation: what does this person need from me on this task, right now? That question alone prevents many avoidable conflicts and retention problems, and it scales from a first-line team to a senior leadership group.</p>
+
+      <p class="mini-h">C. Real-life managerial case</p>
+      <p class="case-by">Contributor: Pratap Nayak · Building a team and growing its people</p>
+      <ol class="num-list">
+        <li><span class="num-circle">1</span><span><strong>Context</strong> — a global manufacturer's engineering centre where I established the solutions engineering team from the ground up. As technical manager I led engineers with very different levels of experience.</span></li>
+        <li><span class="num-circle">2</span><span><strong>The challenge</strong> — build technical capability across the team and build a leadership pipeline, while keeping people engaged. The stake was the team's ability to deliver globally and to retain the people it had trained.</span></li>
+        <li><span class="num-circle">3</span><span><strong>What happened</strong> — I introduced a skill matrix, which showed a skill gap for about half of the team. We then ran talent development initiatives built on performance assessment and competency frameworks, and upskilled all team members. Two associate engineers were developed into assistant managers, and the team recorded zero attrition.</span></li>
+        <li><span class="num-circle">4</span><span><strong>Applying the framework</strong> — the skill matrix was, in effect, a diagnosis of development level, task by task. Read through Situational Leadership: direct the newcomer on a new competency (S1), coach once skills grow but confidence dips (S2), support the capable but cautious engineer (S3), and delegate real ownership to the self-reliant achiever (S4). The two engineers who became assistant managers show the full path from S1 to S4 on management tasks.</span></li>
+        <li><span class="num-circle">5</span><span><strong>What would change</strong> — the matrix identified gaps in skill. Situational Leadership adds the second half: a stated leadership style per person and per task, reviewed regularly. That would stop me over-directing experienced engineers, and would make the shift from coaching to delegating deliberate rather than intuitive. It would also give new managers a shared vocabulary for talking about how they are being led.</span></li>
+        <li><span class="num-circle">6</span><span><strong>Lesson</strong> — diagnose before you decide how much to direct. Development level belongs to a person on a task, not to a person overall. Leading a team is a series of small, task-level calls, and the best ones are made on purpose.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FRAMEWORK 4 ============ -->
+  <section id="fw4" class="unnumbered">
+    <div class="section-head-plain"><h2>4 · The Balanced Scorecard</h2></div>
+    <div class="body-inset">
+      <p class="mini-h">A. Explanation of the framework</p>
+      <p><strong>Origin.</strong> Robert Kaplan and David Norton introduced the Balanced Scorecard in their 1992 Harvard Business Review article "The Balanced Scorecard: Measures That Drive Performance", and developed it into a strategy-management system in their 1996 book (Kaplan &amp; Norton, 1992; 1996).</p>
+      <p><strong>Core idea.</strong> Financial results tell you what has already happened, so managing by them alone is like driving by the rear-view mirror. The Scorecard balances financial measures with the drivers of future results, all derived from the organisation's vision and strategy. For each of four perspectives, a manager defines objectives, measures, targets and initiatives.</p>
+      <ol class="num-list">
+        <li><span class="num-circle">1</span><span><strong>Financial</strong> — how do we look to owners? Revenue, cost, profitability</span></li>
+        <li><span class="num-circle">2</span><span><strong>Customer</strong> — how do customers see us? Delivery, quality, responsiveness, satisfaction</span></li>
+        <li><span class="num-circle">3</span><span><strong>Internal business processes</strong> — what must we excel at? Cycle time, rework, throughput</span></li>
+        <li><span class="num-circle">4</span><span><strong>Learning and growth</strong> — can we keep improving? Skills, knowledge, systems, culture</span></li>
+      </ol>
+      <p>The perspectives form a chain of cause and effect. Capability in people and systems improves internal processes, better processes serve customers better, and satisfied customers produce financial results. A good scorecard tells that story with a few measures per perspective, not a long list. Kaplan and Norton later added strategy maps (2000, 2004), which draw those cause-and-effect links explicitly from objective to objective.</p>
+      <figure class="fw-fig">
+        <svg viewBox="0 0 680 310" role="img" aria-label="Balanced Scorecard: vision and strategy at the centre with four perspectives around it">
+          <defs><marker id="ar4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="sv-arrow"/></marker></defs>
+          <ellipse class="sv-box sv-accent" cx="340" cy="150" rx="104" ry="42"/>
+          <text class="sv-t" x="340" y="146" text-anchor="middle">Vision</text><text class="sv-t" x="340" y="166" text-anchor="middle">and strategy</text>
+          <rect class="sv-box" x="240" y="8" width="200" height="64" rx="6"/><text class="sv-t" x="340" y="38" text-anchor="middle">Financial</text><text class="sv-s" x="340" y="58" text-anchor="middle">How do we look to owners?</text>
+          <rect class="sv-box" x="8" y="118" width="190" height="64" rx="6"/><text class="sv-t" x="103" y="148" text-anchor="middle">Customer</text><text class="sv-s" x="103" y="168" text-anchor="middle">How do customers see us?</text>
+          <rect class="sv-box" x="482" y="118" width="190" height="64" rx="6"/><text class="sv-t" x="577" y="148" text-anchor="middle">Internal processes</text><text class="sv-s" x="577" y="168" text-anchor="middle">What must we excel at?</text>
+          <rect class="sv-box" x="240" y="228" width="200" height="64" rx="6"/><text class="sv-t" x="340" y="258" text-anchor="middle">Learning and growth</text><text class="sv-s" x="340" y="278" text-anchor="middle">Can we keep improving?</text>
+          <g class="sv-line">
+            <line x1="340" y1="108" x2="340" y2="74" marker-end="url(#ar4)"/>
+            <line x1="340" y1="192" x2="340" y2="226" marker-end="url(#ar4)"/>
+            <line x1="236" y1="150" x2="200" y2="150" marker-end="url(#ar4)"/>
+            <line x1="444" y1="150" x2="480" y2="150" marker-end="url(#ar4)"/>
+          </g>
+        </svg>
+        <figcaption>Figure 4. The four perspectives around vision and strategy (drawn for this assignment).</figcaption>
+      </figure>
+
+      <p class="mini-h">B. Why it is one of the most important frameworks for a manager</p>
+      <p><strong>Problems it solves.</strong> Managers drowning in metrics, KPIs that do not link to strategy, short-term thinking, and strategy that never reaches daily work. Senior leaders use it to translate strategy into objectives. Middle managers cascade it into team measures. Frontline staff gain a line of sight from their work to the organisation's goals.</p>
+      <p><strong>What a manager misses without it.</strong> Optimising one measure at the expense of the others, for example faster delivery at the cost of quality or team capability. A technical manager also struggles to explain value in the language the business uses, which is exactly the gap between technical results and business strategy.</p>
+      <p><strong>Limitations.</strong> Designing a good scorecard takes effort and agreement on strategy. It can degrade into a long KPI list, measures can be gamed, and the cause-and-effect links between perspectives are assumed rather than proven. It goes stale if strategy changes and the scorecard does not. It is poorly suited to small teams without a clear strategy, or to fast-moving situations where measures cannot be defined in advance.</p>
+      <p><strong>Why it earns its place.</strong> It is the framework that most directly connects technical delivery to business strategy, which is the bridge a senior role depends on. It also gives a manager a structured way to defend a budget or a decision with evidence from all four perspectives.</p>
+
+      <p class="mini-h">C. Real-life managerial case</p>
+      <p class="case-by">Contributor: Pratap Nayak · Making an engineering centre's performance visible</p>
+      <ol class="num-list">
+        <li><span class="num-circle">1</span><span><strong>Context</strong> — the global cutting-tool manufacturer's engineering centre, handling around 1,300 customer projects across many industries. I was the manager responsible for its delivery performance.</span></li>
+        <li><span class="num-circle">2</span><span><strong>The challenge</strong> — delivery data lived in project databases, and decision-makers needed a timely, trustworthy view of performance. The decision was what to show, and how, so that leaders could act on it and see the centre's value.</span></li>
+        <li><span class="num-circle">3</span><span><strong>What happened</strong> — I built interactive Power BI dashboards by integrating our project databases, supporting data-driven decisions. Over the years the centre reached on-time delivery of about 99%, a record lead time of 4 days, team productivity gains of about 25%, and a project portfolio that generates revenue of more than USD 20 million.</span></li>
+        <li><span class="num-circle">4</span><span><strong>Applying the framework</strong> — the Balanced Scorecard would organise those measures by strategy rather than by what the data allowed. <em>Financial:</em> revenue generated and annual cost saving. <em>Customer:</em> on-time delivery and lead time. <em>Internal processes:</em> revision hours and first-time-right. <em>Learning and growth:</em> skill-matrix coverage, the share of the team upskilled, and knowledge assets captured.</span></li>
+        <li><span class="num-circle">5</span><span><strong>What would change</strong> — the dashboards showed the numbers. A scorecard adds the causal story from capability to process to customer to financial result, and it guards against pushing lead time down at the cost of quality or the team's development. It would also have made the case to senior stakeholders in business terms, and given each measure an owner and a target tied to strategy.</span></li>
+        <li><span class="num-circle">6</span><span><strong>Lesson</strong> — measures need a story. Structure them around strategy, not around data availability, and keep the leading indicators next to the lagging ones. A dashboard answers what happened, while a scorecard also answers why it matters and what to do next. I would use it to brief senior stakeholders each quarter.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ HOW THEY CONNECT ============ -->
+  <section id="connect" class="unnumbered">
+    <div class="section-head-plain"><h2>How the Four Connect</h2></div>
+    <div class="body-inset">
+      <figure class="fw-fig">
+        <svg viewBox="0 0 680 120" role="img" aria-label="Sequence: Balanced Scorecard, Six Sigma DMAIC, Kotter, Situational Leadership">
+          <defs><marker id="ar5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="sv-arrow"/></marker></defs>
+          <rect class="sv-box" x="0" y="10" width="150" height="70" rx="6"/><text class="sv-t" style="font-size:12.5px" x="75" y="40" text-anchor="middle">Balanced Scorecard</text><text class="sv-s" x="75" y="60" text-anchor="middle">Decide what matters</text>
+          <rect class="sv-box" x="176" y="10" width="150" height="70" rx="6"/><text class="sv-t" style="font-size:12.5px" x="251" y="40" text-anchor="middle">Six Sigma DMAIC</text><text class="sv-s" x="251" y="60" text-anchor="middle">Fix the process</text>
+          <rect class="sv-box" x="352" y="10" width="150" height="70" rx="6"/><text class="sv-t" style="font-size:12.5px" x="427" y="40" text-anchor="middle">Kotter's 8 Steps</text><text class="sv-s" x="427" y="60" text-anchor="middle">Make the change stick</text>
+          <rect class="sv-box sv-accent" x="528" y="10" width="150" height="70" rx="6"/><text class="sv-t" style="font-size:12.5px" x="603" y="40" text-anchor="middle">Situational Leadership</text><text class="sv-s" x="603" y="60" text-anchor="middle">Bring people with you</text>
+          <g class="sv-line">
+            <line x1="150" y1="45" x2="174" y2="45" marker-end="url(#ar5)"/>
+            <line x1="326" y1="45" x2="350" y2="45" marker-end="url(#ar5)"/>
+            <line x1="502" y1="45" x2="526" y2="45" marker-end="url(#ar5)"/>
+          </g>
+          <text class="sv-s" x="340" y="108" text-anchor="middle">Strategy → process → adoption → people, and back to the scorecard to check the result</text>
+        </svg>
+        <figcaption>Figure 5. A typical order of use across one improvement-and-change effort.</figcaption>
+      </figure>
+      <p>The Scorecard sets what matters and how to tell. DMAIC improves the process behind a measure that is off target. Kotter's steps make sure the improved way of working is adopted and kept. Situational Leadership shapes how I lead each person through the change. The result is then checked against the scorecard, which starts the next cycle. Used together, they cover the strategy, the process, the organisation and the person.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUICK REFERENCE ============ -->
+  <section id="quickref" class="unnumbered">
+    <div class="section-head-plain"><h2>Quick-Reference Card</h2></div>
+    <div class="body-inset">
+      <div class="kt-table-wrap">
+      <table class="kt-table">
+        <thead><tr><th>Framework</th><th>Use it when</th><th>Key question</th><th>Watch out</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Six Sigma DMAIC</strong></td><td>A repeatable process has defects, rework or delay</td><td>What does the data say is causing the problem?</td><td>One-off or creative decisions; poor data</td></tr>
+          <tr><td><strong>Kotter's 8 Steps</strong></td><td>A change must be adopted across people and functions</td><td>Who is leading it, and why will people change?</td><td>Skipping steps; declaring victory early</td></tr>
+          <tr><td><strong>Situational Leadership</strong></td><td>You are developing, delegating to or onboarding people</td><td>What does this person need on this task?</td><td>Misdiagnosing level; emergencies</td></tr>
+          <tr><td><strong>Balanced Scorecard</strong></td><td>Strategy must become measures and daily priorities</td><td>Do our measures tell the strategy's story?</td><td>KPI overload; gaming; stale measures</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REFERENCES & AI USE ============ -->
+  <section id="practice" class="unnumbered"><div class="section-head-plain"><h2>Put It to Work</h2></div><div class="body-inset"><p>The Templates and Calculators tab turns these frameworks into templates and small calculators: a decision matrix, RICE scoring, payback and NPV, and Cp/Cpk.</p><p class="xlinks"><a class="chips-link" href="templates-calculators.html"><b>Open templates and calculators →</b></a></p></div></section>
+  <section id="refs" class="unnumbered">
+    <div class="section-head-plain"><h2>References and How This Was Built</h2></div>
+    <div class="body-inset">
+      <ul class="plain refs">
+        <li>Blanchard, K. H., Zigarmi, P., &amp; Zigarmi, D. (1985). <em>Leadership and the One Minute Manager</em>. William Morrow.</li>
+        <li>Harry, M., &amp; Schroeder, R. (2000). <em>Six Sigma: The Breakthrough Management Strategy Revolutionizing the World's Top Corporations</em>. Currency/Doubleday.</li>
+        <li>Hersey, P., &amp; Blanchard, K. H. (1969). <em>Management of Organizational Behavior: Utilizing Human Resources</em>. Prentice Hall.</li>
+        <li>Kaplan, R. S., &amp; Norton, D. P. (1992). The balanced scorecard: Measures that drive performance. <em>Harvard Business Review, 70</em>(1), 71–79.</li>
+        <li>Kaplan, R. S., &amp; Norton, D. P. (1996). <em>The Balanced Scorecard: Translating Strategy into Action</em>. Harvard Business School Press.</li>
+        <li>Kotter, J. P. (1995). Leading change: Why transformation efforts fail. <em>Harvard Business Review, 73</em>(2), 59–67.</li>
+        <li>Kotter, J. P. (1996). <em>Leading Change</em>. Harvard Business School Press.</li>
+      </ul>
+      <p class="mini-h">How this was built</p>
+      <p>AI tool used: Claude (Anthropic). It was used to structure the page and draft wording from my own resume and career statement, and to build the web page. The four frameworks were chosen to fit my career, and each case is drawn from my own professional record, anonymised, with rounded figures. All diagrams were drawn for this page.</p>
+    </div>
+  </section>
+
+  <section id="beyond" class="unnumbered">
+    <div class="section-head-plain"><h2>Beyond the Assignment</h2></div>
+    <div class="body-inset">
+      <p>The four frameworks above are the ones I chose for this assignment. For my own learning, I have gone further and collected fourteen more frameworks that matter for business transformation, my specialisation. This is self-study and is not part of the graded submission.</p>
+      <div class="journal-list">
+        <a class="journal-card" href="transformation-frameworks.html">
+          <span class="jc-num">+14</span>
+          <span><h3>Beyond the Toolkit: Frameworks for Business Transformation</h3><p class="jc-meta">Self-study · Not graded</p><p class="jc-desc">Strategy, value creation, capability, people and AI governance: from Porter's Five Forces and Blue Ocean to ADKAR and the NIST AI Risk Management Framework, each tied to my work.</p><p class="jc-go">Read the extended toolkit →</p></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<script>
+(function(){
+  var g=document.getElementById('kotter-steps');
+  if(g){
+    var labels=[['1','Urgency'],['2','Coalition'],['3','Vision'],['4','Communicate'],['5','Empower'],['6','Short-term','wins'],['7','Consolidate'],['8','Anchor']];
+    var NS='http://www.w3.org/2000/svg', out='';
+    labels.forEach(function(l,i){
+      var h=70+i*22, x=i*85, y=250-h;
+      out+='<rect class="sv-box'+(i===7?' sv-accent':'')+'" x="'+x+'" y="'+y+'" width="80" height="'+h+'" rx="5"/>';
+      out+='<text class="sv-t" x="'+(x+40)+'" y="'+(y+24)+'" text-anchor="middle">'+l[0]+'</text>';
+      out+='<text class="sv-s" x="'+(x+40)+'" y="'+(y+42)+'" text-anchor="middle">'+l[1]+'</text>';
+      if(l[2]) out+='<text class="sv-s" x="'+(x+40)+'" y="'+(y+56)+'" text-anchor="middle">'+l[2]+'</text>';
+    });
+    g.innerHTML=out;
+  }
+})();
+</script>
+
+
+
+
+</div>
+
+</div>
+<footer>Pratap Nayak · Frameworks drawn from my coursework at IIM Sirmaur (Executive MBA with AI) and my engineering career. <a href="index.html">Toolkit overview</a> · <a href="https://github.com/nayak-pratap">GitHub profile</a></footer>
+</body></html>
